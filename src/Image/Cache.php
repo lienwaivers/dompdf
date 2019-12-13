@@ -120,7 +120,7 @@ class Cache
             }
 
             // Check if the local file is readable
-            if (!is_readable($resolved_url) || !filesize($resolved_url)) {
+            if (!filesize($resolved_url)) {
                 throw new ImageException("Image not readable or empty", E_WARNING);
             } // Check is the file is an image
             else {
